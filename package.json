@@ -8,16 +8,23 @@
     "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
   "dependencies": {
-    "autoprefixer": "^9.5.1"
+    "@uppy/aws-s3-multipart": "^1.8.2",
+    "@uppy/companion": "^2.0.0-alpha.9",
+    "@uppy/core": "^1.12.2",
+    "@uppy/dashboard": "^1.12.2",
+    "autoprefixer": "^9.8.6"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^1.2.0",
+    "browser-sync": "^2.26.12",
+    "browser-sync-webpack-plugin": "^2.2.2",
     "cross-env": "^5.2.1",
     "cssnano": "^4.1.10",
-    "laravel-mix": "^5.0.1",
-    "laravel-mix-postcss-config": "^1.0.2",
+    "laravel-mix": "^5.0.4",
+    "laravel-mix-postcss-config": "^1.0.4",
     "postcss-cli": "^6.1.2",
-    "postcss-nested": "^4.2.1",
-    "tailwindcss": "^1.1.4"
+    "postcss-import": "^12.0.1",
+    "postcss-nested": "^4.2.3",
+    "tailwindcss": "^1.6.2"
   }
 }

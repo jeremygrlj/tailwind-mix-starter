@@ -1,5 +1,6 @@
 let mix = require('laravel-mix');
 require('laravel-mix-postcss-config');
+require("postcss-import")
 
 /*
  |--------------------------------------------------------------------------
@@ -14,7 +15,8 @@ require('laravel-mix-postcss-config');
 
 mix.postCss('resources/assets/css/style.css', 'public', [
     require('tailwindcss'),
-    require('postcss-nested')
+    require('postcss-nested'),
+    require("postcss-import")
 ]).postCssConfig();
 
 /*
@@ -36,14 +38,14 @@ mix.setResourceRoot('./');
 // mix.less(src, output);
 // mix.stylus(src, output);
 // mix.postCss(src, output, [require('postcss-some-plugin')()]);
-// mix.browserSync('my-site.test');
+mix.browserSync('drop.test');
 // mix.combine(files, destination);
 // mix.babel(files, destination); <-- Identical to mix.combine(), but also includes Babel compilation.
 // mix.copy(from, to);
 // mix.copyDirectory(fromDir, toDir);
 // mix.minify(file);
-// mix.sourceMaps(); // Enable sourcemaps
-// mix.version(); // Enable versioning.
+mix.sourceMaps(); // Enable sourcemaps
+mix.version(); // Enable versioning.
 // mix.disableNotifications();
 // mix.setPublicPath('path/to/public');
 // mix.setResourceRoot('prefix/for/resource/locators');
