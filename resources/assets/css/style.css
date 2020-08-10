@@ -1,3 +1,10 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import "../../../node_modules/@uppy/core/dist/style.css";
+@import "../../../node_modules/@uppy/dashboard/dist/style.css";
+
+#drag-drop-area .uppy-Dashboard-inner {
+  background: #fff;
+}

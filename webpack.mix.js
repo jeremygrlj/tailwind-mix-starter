@@ -1,6 +1,7 @@
 let mix = require('laravel-mix');
 require('laravel-mix-postcss-config');
-require("postcss-import")
+require("postcss-import");
+require("postcss-loader");
 
 /*
  |--------------------------------------------------------------------------
@@ -16,8 +17,9 @@ require("postcss-import")
 mix.postCss('resources/assets/css/style.css', 'public', [
     require('tailwindcss'),
     require('postcss-nested'),
-    require("postcss-import")
 ]).postCssConfig();
+
+mix.js('resources/assets/js/main.js', 'public');
 
 /*
  |--------------------------------------------------------------------------
@@ -38,7 +40,9 @@ mix.setResourceRoot('./');
 // mix.less(src, output);
 // mix.stylus(src, output);
 // mix.postCss(src, output, [require('postcss-some-plugin')()]);
-mix.browserSync('drop.test');
+mix.browserSync({
+    proxy: 'drop.test'
+});
 // mix.combine(files, destination);
 // mix.babel(files, destination); <-- Identical to mix.combine(), but also includes Babel compilation.
 // mix.copy(from, to);
